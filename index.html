@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="经典滑块拼图游戏，挑战你的逻辑思维！随时随地，打开即玩。">
+  <meta name="keywords" content="滑块拼图,拼图游戏,益智游戏,HTML5游戏">
+  <meta name="author" content="Sliding Puzzle Team">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="滑块拼图 - 经典益智游戏">
+  <meta property="og:description" content="经典滑块拼图游戏，挑战你的逻辑思维！">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-image.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="滑块拼图 - 经典益智游戏">
+  <meta name="twitter:description" content="经典滑块拼图游戏，挑战你的逻辑思维！">
+  <meta name="twitter:image" content="/images/og-image.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#4A90D9">
+  <meta name="msapplication-TileColor" content="#4A90D9">
+  
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="滑块拼图">
+  
+  <title>滑块拼图 - 经典益智游戏</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/responsive.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">加载中...</p>
+    </div>
+  </div>
+  
+  <!-- App Container -->
+  <div id="app" class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <button class="btn-icon" id="menu-btn" aria-label="菜单">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <h1 class="logo">滑块拼图</h1>
+      </div>
+      <div class="header-right">
+        <div class="coin-display">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10"/>
+            <text x="12" y="16" text-anchor="middle" fill="white" font-size="12">¥</text>
+          </svg>
+          <span id="coin-count">0</span>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main" id="main-content">
+      <!-- Pages will be loaded here -->
+    </main>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="bottom-nav">
+      <a href="#home" class="nav-item active" data-page="home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>首页</span>
+      </a>
+      <a href="#levels" class="nav-item" data-page="levels">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>关卡</span>
+      </a>
+      <a href="#achievements" class="nav-item" data-page="achievements">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="7"></circle>
+          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+        </svg>
+        <span>成就</span>
+      </a>
+      <a href="#profile" class="nav-item" data-page="profile">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>我的</span>
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Modals Container -->
+  <div id="modals-container" class="modals-container"></div>
+  
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+  
+  <!-- Scripts -->
+  <script type="module" src="/src/app.js"></script>
+  
+  <!-- No Script Fallback -->
+  <noscript>
+    <div class="noscript-message">
+      <p>请启用 JavaScript 以运行此应用。</p>
+    </div>
+  </noscript>
+</body>
+</html>
